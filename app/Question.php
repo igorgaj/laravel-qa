@@ -7,9 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     //
-	protected $fillable = ['title','body'];
+	protected $fillable = ['name','body'];
 	
 	public function user() {
-		return $this->belongTo(User::class);
+		return $this->belongsTo(User::class);
 	}
+	
+	public function setNameAttribute($value) {
+		$this->attributes['name'] = $value;
+		$this->attributes['slug'] = str_slug($value);
+	}	
 }
