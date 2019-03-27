@@ -7,3 +7,30 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+.counters {
+
+}
+
+strong {
+font-szie: 2em;
+}
+
+.vote, .answer {
+
+}
+
+.status {
+	&.unanswered {
+		border: none;
+	}
+	&.answered{
+		border: 1px solid $color-green;
+		color: $color-green;
+	}
+	&.answered-accepted{
+		background-color: $color-green;
+		color: $color-white;
+	}
+}
