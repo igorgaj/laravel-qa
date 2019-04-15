@@ -88,6 +88,7 @@
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
+					<a href="http://127.0.0.1:8000/question">Questions</a>
                 </div>
             </div>
         </div>

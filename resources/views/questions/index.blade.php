@@ -15,6 +15,7 @@
 				</div>
 
                 <div class="panel-body">
+					@import('layouts._messages')
 					@foreach ($questions as $question)
 						<div class="media">
 							<div class="d- flex-column counter">
