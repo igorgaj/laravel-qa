@@ -50,7 +50,7 @@ class QuestionController extends Controller
 			 'body' => $request->body]
 		);
 		
-		return redirect()->route('questions.index');
+		return redirect()->route('question.index');
 		
 		
 		//return redirect()->route('question.index');
@@ -75,7 +75,7 @@ class QuestionController extends Controller
      */
     public function edit(Question $question)
     {
-        //
+        return View('questions.edit',compact('question'));
     }
 
     /**
@@ -88,6 +88,11 @@ class QuestionController extends Controller
     public function update(Request $request, Question $question)
     {
         //
+		$question->update([
+			'name' => $request->title,
+			'body' => $request->body
+		]);
+		return redirect('/question')->with('success','Your question has been update');
     }
 
     /**
