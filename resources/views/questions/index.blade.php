@@ -23,7 +23,7 @@
 										<strong>{{$question->votes}}</strong> {{str_plural('vote',$question->votes)}}
 									</div>
 									<div class="badge status {{$question->status}}">
-										<strong>{{$question->answers}}</strong> {{str_plural('answer',$question->answers)}}
+										<strong>{{$question->answers_count}}</strong> {{str_plural('answer',$question->answers_count)}}
 									</div>
 									<div class="view badge badge-light">
 										{{$question->views .' '. str_plural('view',$question->views)}}
