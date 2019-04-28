@@ -23,5 +23,36 @@
 			</div>	
 		</div>
 	</div>
+	
+	
+	<div class="row mt-3">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-body">
+					<div class="card-title">
+						<h2>{{$question->answers_count . ' ' . str_plural('answer', $question->answers_count)}}</h2>
+					</div>
+					<hr>
+					@foreach($question->answers as $answer) 
+						<div class="media">
+							<div class="media-body">
+								{!! $answer->body_html !!}
+								<div class="float-right">
+									<span class="text-muted">Odgovoreno {{$answer->created_date}}</span>
+									<div class="media">
+										<a href="{{$answer->user->url}}">
+											<img src="{{$answer->user->avatar}}" />
+										</a>
+										<a href="{{$answer->user->url}}" class="pl-2 mt-2">{{$answer->user->name}}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+					@endforeach
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 @endsection
